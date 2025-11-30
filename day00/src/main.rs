@@ -53,3 +53,6 @@ fn part1(data: &[String]) -> u64 {
 fn part2(data: &[String]) -> u64 {
     data.iter().count() as u64
 }
+
+#[cfg(test)]
+mod tests;
