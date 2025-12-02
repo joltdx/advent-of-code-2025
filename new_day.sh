@@ -13,13 +13,13 @@ if [ -d "$NEW_DAY" ]; then
     exit 1
 fi
 
-# Just simply copy the template day00 directory
-cp -r day00 "$NEW_DAY"
+# Just simply copy the template template_day directory
+cp -r template_day "$NEW_DAY"
 
 # Update the package name in Cargo.toml
-sed "s/name = \"day00\"/name = \"$NEW_DAY\"/" "$NEW_DAY/Cargo.toml" > "$NEW_DAY/Cargo.toml.tmp" && mv "$NEW_DAY/Cargo.toml.tmp" "$NEW_DAY/Cargo.toml"
+sed "s/name = \"template_day\"/name = \"$NEW_DAY\"/" "$NEW_DAY/Cargo.toml" > "$NEW_DAY/Cargo.toml.tmp" && mv "$NEW_DAY/Cargo.toml.tmp" "$NEW_DAY/Cargo.toml"
 
 # Makes no sense to keep the 'target' directory...
 rm -rf "$NEW_DAY/target"
 
-echo "Successfully created '$NEW_DAY' based on 'day00'."
+echo "Successfully created '$NEW_DAY' based on 'template_day'."
