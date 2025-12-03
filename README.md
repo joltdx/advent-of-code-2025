@@ -1,18 +1,28 @@
 # advent-of-code-2025
 [Advent of Code 2025](https://adventofcode.com/2025) in [Rust](https://rust-lang.org/)
 
-This year I'm trying to actually comment my code to know what, or mostly why, I did some of the thing in the way that I actually did some of the things...
+This year I'm trying to actually comment my code to remember what I did, and mostly why I did some of the thing in the way that I actually did some of the things...
 
-I'm not really a Rustacean, but I am really getting to like it :)
+I'm not really a rustacean, but I am really getting to like this language :)
 
-Obviously asking some AI for help and review, but I'm actually coding myself...
+Obviously asking some AI for help and review, but I'm actually thinking and coding for myself...
 
-> Day 1 - Secret Entrance (The one with the clock)
-<br>Some different variations, but nothing fancy
+## Day 1 - Secret Entrance (The one with the clock)
+>part 1 @ 59.942µs
+<br>part 2 @ 56.68µs
 
-> Day 2 - Gift Shop (The one with the product IDs)
-<br>Low performance string stuff in part 1, a bit more mathy part 2
+Some different variations, but nothing fancy
 
-> Day 3 - Lobby (The one with the battery **jolt**ages)
-<br>Super slow solution for part 1 with strings and characters and parsing to switch types
-<br>Way more performant byte stuff in part 2 
+
+## Day 2 - Gift Shop (The one with the product IDs)
+>part 1 @ 88.874µs
+<br>part 2 @ 595.101µs
+
+Low performance string stuff in part 1, a bit more mathy part 2
+
+## Day 3 - Lobby (The one with the battery **jolt**ages)
+> part 1 @ 800.545µs
+<br>part 2 @ 380.642µs
+
+Super slow solution for part 1 with strings and characters and parsing to switch types.
+Way more performant byte stuff in part 2 
