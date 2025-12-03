@@ -7,20 +7,20 @@ I'm not really a rustacean, but I am really getting to like this language :)
 
 Obviously asking some AI for help and review, but I'm actually thinking and coding for myself...
 
-## Day 1 - Secret Entrance (The one with the clock)
+## Day 1 - Secret Entrance (The one with the dial on the safe)
 >part 1 @ 59.942µs
 <br>part 2 @ 56.68µs
 
 Some different variations, but nothing fancy
 
 
-## Day 2 - Gift Shop (The one with the product IDs)
+## Day 2 - Gift Shop (The one with the invalid product IDs)
 >part 1 @ 88.874µs
 <br>part 2 @ 595.101µs
 
 Low performance string stuff in part 1, a bit more mathy part 2
 
-## Day 3 - Lobby (The one with the battery **jolt**ages)
+## Day 3 - Lobby (The one with the battery bank **jolt**ages)
 > part 1 @ 800.545µs
 <br>part 2 @ 380.642µs
 
