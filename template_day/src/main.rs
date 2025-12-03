@@ -15,14 +15,12 @@ fn main() {
             // Part 1
             let start = Instant::now();
             let result1 = part1(&contents);
-            let runtime_ms = start.elapsed().as_nanos() as f64 / 1_000_000.0;
-            println!("Part 1: {} ({:.6} ms)", result1, runtime_ms);
+            println!("Part 1: {}\n        {:?}", result1, start.elapsed());
 
             // Part 2
             let start = Instant::now();
             let result2 = part2(&contents);
-            let runtime_ms = start.elapsed().as_nanos() as f64 / 1_000_000.0;
-            println!("Part 2: {} ({:.6} ms)", result2, runtime_ms);
+            println!("\nPart 2: {}\n        {:?}", result2, start.elapsed());
         }
 
         // If there was an error reading the file, print an error message
