@@ -21,8 +21,15 @@ Some different variations, but nothing fancy
 Low performance string stuff in part 1, a bit more mathy part 2
 
 ## Day 3 - Lobby (The one with the battery bank **jolt**ages)
-> part 1 @ 800.545µs
+>part 1 @ 800.545µs
 <br>part 2 @ 380.642µs
 
 Super slow solution for part 1 with strings and characters and parsing to switch types.
 Way more performant byte stuff in part 2 
+
+## Day 4 - Printing Departement (The one with the rolls of paper)
+>part 1 @ 1.329051ms
+<br>part 2 @ 6.715637ms
+
+Surprisingly long runtime, but just very basic byte reading and counting in part 1.
+Part 2 includes a roll coordinate queue for a bit more efficiency with rechecking
