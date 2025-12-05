@@ -33,3 +33,10 @@ Way more performant byte stuff in part 2
 
 Surprisingly long runtime, but just very basic byte reading and counting in part 1.
 Part 2 includes a roll coordinate queue for a bit more efficiency with rechecking
+
+## Day 5 - Cafeteria (The one with the ingredient ranges)
+>part 1 @ 8.595µs
+<br>part 2 @ 599ns
+
+Wow! This one was fun to implement... Sorting, merging and then a straight forward
+loop to check for fresh or not. And part 2 in basically a one-liner :) 
