@@ -40,3 +40,10 @@ Part 2 includes a roll coordinate queue for a bit more efficiency with recheckin
 
 Wow! This one was fun to implement... Sorting, merging and then a straight forward
 loop to check for fresh or not. And part 2 in basically a one-liner :) 
+
+## Day 6 - Trash Compactor (The one with the right-to-left vertical math)
+>part 1 @ 791.17µs
+<br>part 2 @ 239.57µs
+
+Nothing fancy. Reading data, parsing and vectorizing in part 1, which is slower than
+the part 2 with less allocation and parsing stuff and more just data access and arithmetics...
