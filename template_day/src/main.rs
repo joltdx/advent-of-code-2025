@@ -31,6 +31,11 @@ fn main() {
 }
 
 fn read_input(file: &str) -> Result<Vec<String>, Box<dyn std::error::Error>> {
+    // For just reading into a vector of strings, this function could just be:
+    //    let content = fs::read_to_string(file)?;
+    //    Ok(content.lines().map(String::from).collect())
+    // but most day'es well be parsing data here, line by line, so let's have
+    // the buffered reading here...
     let input_file = File::open(file)?;
     let buffered = BufReader::new(input_file);
 
