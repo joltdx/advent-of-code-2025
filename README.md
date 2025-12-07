@@ -47,3 +47,9 @@ loop to check for fresh or not. And part 2 in basically a one-liner :)
 
 Nothing fancy. Reading data, parsing and vectorizing in part 1, which is slower than
 the part 2 with less allocation and parsing stuff and more just data access and arithmetics...
+
+## Day 7 - Laboratories (The one with the beam splitter and quantum timelines)
+>part 1 @ 171.734µs
+<br>part 2 @ 170.385µs
+
+Just looping and counting for part 1 and recursion and memoization in part 2
