@@ -53,3 +53,12 @@ the part 2 with less allocation and parsing stuff and more just data access and 
 <br>part 2 @ 170.385µs
 
 Just looping and counting for part 1 and recursion and memoization in part 2
+
+## Day 8 - Playground (The one with the junction boxes and the connected circuits)
+>part 1 @ 109.814µs
+<br>part 2 @ 5.146312ms
+
+A bit more Rusty now with structs and impls. Calculating distances and then connecting as required.
+First solution keeping track in a `Vec<Vec<usize>>`, was quite slow, so on suggestion from an AI,
+refactored into some kind of a "Disjoint Set Union" or "Union-Find", which ended up being about
+15-20 times faster
