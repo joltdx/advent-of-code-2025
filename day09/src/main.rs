@@ -2,7 +2,6 @@ use std::env;
 use std::fs::File;
 use std::io::{BufRead, BufReader};
 use std::time::Instant;
-use std::collections::HashSet;
 
 fn main() {
     // Get the input filename from command line arguments or default to "input.txt"
@@ -80,66 +79,6 @@ impl<'a> Solver<'a> {
                 }
             }
         }        
-
-        max_area
-    }
-
-   fn _abandoned_part2(&self) -> u64 {
-        // This was waaaay too slow, trying to check each and every point in the rectanble...
-        let mut max_area: u64 = 0;
-
-        let mut vertical_edges: HashSet<(u32,u32)> = HashSet::new();
-        let mut prev = self.red_tiles.first().unwrap();
-        for coord in self.red_tiles.iter().skip(1) {
-            if coord.0 == prev.0 {
-                // vertical edge
-                let y_start = prev.1.min(coord.1) as u32;
-                let y_end = prev.1.max(coord.1) as u32;
-                for y in y_start..=y_end {
-                    vertical_edges.insert((coord.0 as u32, y));
-                }
-            }
-            prev = coord;
-        }
-
-        for i in 0..self.red_tiles.len() {
-            for j in (i + 1)..self.red_tiles.len() {
-                let first = self.red_tiles[i];
-                let second = self.red_tiles[j];
-                let area = (first.0.abs_diff(second.0) + 1) * (first.1.abs_diff(second.1) + 1);
-                if area > max_area {
-                    // Are we contained by vertical edges?
-                    let x_start = first.0.min(second.0) as u32;
-                    let x_end = first.0.max(second.0) as u32;
-                    let y_start = first.1.min(second.1) as u32;
-                    let y_end = first.1.max(second.1) as u32;
-                    let mut contained = true;
-                    for x in x_start..=x_end {
-                        for y in y_start..=y_end {
-                            let mut crossings = 0;
-                            for ray in 0..=x {
-                                if vertical_edges.contains(&(ray, y)) {
-                                    crossings += 1;
-                                }
-                            }
-                            if crossings % 2 == 0 {
-                                if !vertical_edges.contains(&(x, y)) {
-                                    contained = false;
-                                    break;
-                                }
-                            }
-                        }
-                        if !contained {
-                            break;
-                        }
-                    }
-                    if contained {
-                        max_area = area;
-                    }
-
-                }
-            }
-        }
 
         max_area
     }
