@@ -12,14 +12,16 @@ fn main() {
     match read_input(filename) {
         // If successful, run parts 1 and 2 and measure their execution time
         Ok(contents) => {
+            let solver = Solver::new(&contents);
+
             // Part 1
             let start = Instant::now();
-            let result1 = part1(&contents);
+            let result1 = solver.part1();
             println!("Part 1: {}\n        {:?}", result1, start.elapsed());
 
             // Part 2
             let start = Instant::now();
-            let result2 = part2(&contents);
+            let result2 = solver.part2();
             println!("\nPart 2: {}\n        {:?}", result2, start.elapsed());
         }
 
@@ -49,12 +51,22 @@ fn read_input(file: &str) -> Result<Vec<String>, Box<dyn std::error::Error>> {
     Ok(data)
 }
 
-fn part1(data: &[String]) -> u64 {
-    data.iter().count() as u64
+struct Solver<'a> {
+    data: &'a [String],
 }
 
-fn part2(data: &[String]) -> u64 {
-    data.iter().count() as u64
+impl<'a> Solver<'a> {
+    fn new(data: &'a [String]) -> Self {
+        Solver { data }
+    }
+
+    fn part1(&self) -> u64 {
+        self.data.iter().count() as u64
+    }
+
+    fn part2(&self) -> u64 {
+        self.data.iter().count() as u64
+    }
 }
 
 #[cfg(test)]
