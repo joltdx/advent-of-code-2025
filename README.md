@@ -62,3 +62,13 @@ A bit more Rusty now with structs and impls. Calculating distances and then conn
 First solution keeping track in a `Vec<Vec<usize>>`, was quite slow, so on suggestion from an AI,
 refactored into some kind of a "Disjoint Set Union" or "Union-Find", which ended up being about
 15-20 times faster
+
+## Day 9 - Movie Theater (The one with the floor tiles and largest rectangle)
+>part 1 @ 945.452µs
+<br>part 2 @ 34.257712ms
+
+Wow, part 1 was just very easily checked for all combinations. For part 2 I first tried with some
+ray-casting algorithm, but it was way too slow. The input is not a crazy mess of edges back and forth
+and right next to eachother, so I ended up checking just the edges of the rectangles, and some point
+in the middle to find possible rectangles. Will not hold for a general case solution, but it did
+for this day's AoC
