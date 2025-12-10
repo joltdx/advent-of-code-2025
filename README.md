@@ -72,3 +72,16 @@ ray-casting algorithm, but it was way too slow. The input is not a crazy mess of
 and right next to eachother, so I ended up checking just the edges of the rectangles, and some point
 in the middle to find possible rectangles. Will not hold for a general case solution, but it did
 for this day's AoC
+
+## Day 10 - Factory (The one with the machinse with buttons and lights and joltages)
+>part 1 @ 249.165µs
+<br>part 2 @ 195.316406ms
+
+For part 1, I am very happy with generating binary representations of things and pressing
+buttons using XOR.
+
+For part 2, haha, well, it ended up finally working and being performant through an iterative
+process of me trying stuff, having Gemini as a side-kick to suggest things, refactor code,
+optimizing whatnots, rinsing and repeating from step 1 until it was first of all giving a
+correct answer and secondly until running fast enough. Learned a lot in the process, next
+time I might consider finding a crate for it though... Crazy stuff
