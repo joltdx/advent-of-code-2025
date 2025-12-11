@@ -73,7 +73,7 @@ and right next to eachother, so I ended up checking just the edges of the rectan
 in the middle to find possible rectangles. Will not hold for a general case solution, but it did
 for this day's AoC
 
-## Day 10 - Factory (The one with the machinse with buttons and lights and joltages)
+## Day 10 - Factory (The one with the machines with buttons and lights and joltages)
 >part 1 @ 249.165µs
 <br>part 2 @ 195.316406ms
 
@@ -85,3 +85,11 @@ process of me trying stuff, having Gemini as a side-kick to suggest things, refa
 optimizing whatnots, rinsing and repeating from step 1 until it was first of all giving a
 correct answer and secondly until running fast enough. Learned a lot in the process, next
 time I might consider finding a crate for it though... Crazy stuff
+
+## Day 11 - Reactor (The one with the device outputs path counting)
+>part 1 @ 10.431µs
+<br>part 2 @ 253.785µs
+
+Just simple DFS for part 1, with modification for part 2 to allow for avoiding a certain node
+(to be able to multiply sub paths for the end result) and memoization instead of just keeping
+track of visited nodes in a specific path.
