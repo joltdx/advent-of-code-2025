@@ -93,3 +93,14 @@ time I might consider finding a crate for it though... Crazy stuff
 Just simple DFS for part 1, with modification for part 2 to allow for avoiding a certain node
 (to be able to multiply sub paths for the end result) and memoization instead of just keeping
 track of visited nodes in a specific path.
+
+## Day 12 - Christmas Tree Farm (The one with the presents in grid fitting problem)
+>part 1 @ 256.368106ms
+<br>There is no part 2
+
+Wow, this was actually a pretty complex box fitting problem to get to run fast... Luckily
+it seems we were played a bit of a trick with the input being very solvable. (Spoiler: it
+would just have been enought to just see if the grid was big enough to fit all the boxes,
+not actually trying to optimize their placement). Didn't notice that until after I had
+actually done such a solution, using bit operations for performance. Ah well, it's for
+fun and games and it was indeed fun and I gained some developer XP as always
