@@ -8,55 +8,55 @@ I'm not really a rustacean, but I am really getting to like this language :)
 Obviously asking some AI for help and review, but I'm actually thinking and coding for myself...
 
 ## Day 1 - Secret Entrance (The one with the dial on the safe)
->part 1 @ 59.942µs
-<br>part 2 @ 56.68µs
+>part 1 @ 16.454µs
+<br>part 2 @ 28.008µs
 
 Some different variations, but nothing fancy
 
 
 ## Day 2 - Gift Shop (The one with the invalid product IDs)
->part 1 @ 88.874µs
-<br>part 2 @ 595.101µs
+>part 1 @ 32.076µs
+<br>part 2 @ 59.416µs
 
 Low performance string stuff in part 1, a bit more mathy part 2
 
 ## Day 3 - Lobby (The one with the battery bank **jolt**ages)
->part 1 @ 800.545µs
-<br>part 2 @ 380.642µs
+>part 1 @ 30.602µs
+<br>part 2 @ 56.005µs
 
 Super slow solution for part 1 with strings and characters and parsing to switch types.
 Way more performant byte stuff in part 2 
 
 ## Day 4 - Printing Departement (The one with the rolls of paper)
->part 1 @ 1.329051ms
-<br>part 2 @ 6.715637ms
+>part 1 @ 272.591µs
+<br>part 2 @ 1.168003ms
 
 Surprisingly long runtime, but just very basic byte reading and counting in part 1.
 Part 2 includes a roll coordinate queue for a bit more efficiency with rechecking
 
 ## Day 5 - Cafeteria (The one with the ingredient ranges)
->part 1 @ 8.595µs
-<br>part 2 @ 599ns
+>part 1 @ 1.072µs
+<br>part 2 @ 82ns
 
 Wow! This one was fun to implement... Sorting, merging and then a straight forward
 loop to check for fresh or not. And part 2 in basically a one-liner :) 
 
 ## Day 6 - Trash Compactor (The one with the right-to-left vertical math)
->part 1 @ 791.17µs
-<br>part 2 @ 239.57µs
+>part 1 @ 169.46µs
+<br>part 2 @ 78.946µs
 
 Nothing fancy. Reading data, parsing and vectorizing in part 1, which is slower than
 the part 2 with less allocation and parsing stuff and more just data access and arithmetics...
 
 ## Day 7 - Laboratories (The one with the beam splitter and quantum timelines)
->part 1 @ 171.734µs
-<br>part 2 @ 170.385µs
+>part 1 @ 20.09µs
+<br>part 2 @ 111.545µs
 
 Just looping and counting for part 1 and recursion and memoization in part 2
 
 ## Day 8 - Playground (The one with the junction boxes and the connected circuits)
->part 1 @ 109.814µs
-<br>part 2 @ 5.146312ms
+>part 1 @ 23.696µs
+<br>part 2 @ 2.88143ms
 
 A bit more Rusty now with structs and impls. Calculating distances and then connecting as required.
 First solution keeping track in a `Vec<Vec<usize>>`, was quite slow, so on suggestion from an AI,
@@ -64,8 +64,8 @@ refactored into some kind of a "Disjoint Set Union" or "Union-Find", which ended
 15-20 times faster
 
 ## Day 9 - Movie Theater (The one with the floor tiles and largest rectangle)
->part 1 @ 945.452µs
-<br>part 2 @ 34.257712ms
+>part 1 @ 87.773µs
+<br>part 2 @ 4.010792ms
 
 Wow, part 1 was just very easily checked for all combinations. For part 2 I first tried with some
 ray-casting algorithm, but it was way too slow. The input is not a crazy mess of edges back and forth
@@ -74,8 +74,8 @@ in the middle to find possible rectangles. Will not hold for a general case solu
 for this day's AoC
 
 ## Day 10 - Factory (The one with the machines with buttons and lights and joltages)
->part 1 @ 249.165µs
-<br>part 2 @ 195.316406ms
+>part 1 @ 207.12µs
+<br>part 2 @ 201.549355ms
 
 For part 1, I am very happy with generating binary representations of things and pressing
 buttons using XOR.
